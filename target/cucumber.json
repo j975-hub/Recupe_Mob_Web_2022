@@ -1,0 +1,54 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-08-11T16:02:54.385Z",
+        "line": 4,
+        "name": "Recupe Team Sign in application",
+        "description": "",
+        "id": "login-on-recupe-team-clinic;recupe-team-sign-in-application",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 16361000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User select the User type as \"Admin / PSM\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Admin / PSM\"",
+                  "offset": 29
+                }
+              ],
+              "location": "WebStepDefinitions.TestCase1.user_select_the_user_type_as(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3934000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User will give the credential to sign in the application",
+            "match": {
+              "location": "WebStepDefinitions.TestCase1.user_will_give_the_credential_to_sign_in_the_applicaton()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login on Recupe Team Clinic",
+    "description": "  Description: User will login as Admin",
+    "id": "login-on-recupe-team-clinic",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/WebFeatures/TestCase1.feature",
+    "tags": []
+  }
+]
