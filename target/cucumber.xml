@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.124">
-<testcase classname="Login on Recupe Team Clinic" name="Recupe Team Sign in application" time="20.622">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="31.381">
+<testcase classname="Login on Recupe Team Clinic" name="Recupe Team Sign in application" time="30.445">
 <system-out><![CDATA[Given User select the User type as "Admin / PSM"............................passed
 Then User will give the credential to sign in the application...............passed
 ]]></system-out>

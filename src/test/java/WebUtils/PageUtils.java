@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.*;
 
+
 import java.time.Duration;
 import java.util.NoSuchElementException;
 
@@ -22,7 +23,7 @@ public class PageUtils {
 
     public WebElement waitAndSendkeys(WebElement element, Object value) {
         WebElement find;
-        WebDriverWait wait = new WebDriverWait(driver, 3);
+        WebDriverWait wait = new WebDriverWait(driver,10);
         find = wait.until(ExpectedConditions.visibilityOf(element));
 
         highLightElement(driver, element);

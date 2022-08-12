@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-11T16:02:54.385Z",
+        "start_timestamp": "2022-08-12T10:22:51.882Z",
         "line": 4,
         "name": "Recupe Team Sign in application",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 16361000000,
+              "duration": 25088000000,
               "status": "passed"
             },
             "line": 5,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 3934000000,
+              "duration": 4835000000,
               "status": "passed"
             },
             "line": 6,
