@@ -27,7 +27,7 @@ public class TestBaseUtils {
 
     public WebElement waitAndSendkeys(WebElement element, Object value) {
         WebElement find;
-        WebDriverWait wait = new WebDriverWait(driver, 3);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         find = wait.until(ExpectedConditions.visibilityOf(element));
 
         highLightElement(driver, element);
