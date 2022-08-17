@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="31.381">
-<testcase classname="Login on Recupe Team Clinic" name="Recupe Team Sign in application" time="30.445">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="44.561">
+<testcase classname="Patient Creation" name="Patient details Creation" time="44.103">
 <system-out><![CDATA[Given User select the User type as "Admin / PSM"............................passed
 Then User will give the credential to sign in the application...............passed
+And User will Add patient Tab...............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

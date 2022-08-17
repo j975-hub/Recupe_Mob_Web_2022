@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.*;
 
 
-import java.time.Duration;
 import java.util.NoSuchElementException;
 
 public class PageUtils {
@@ -33,10 +32,9 @@ public class PageUtils {
         return find;
     }
     public void waitAndClick(WebElement element){
-        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(60))
-                .pollingEvery(Duration.ofMillis(100)).ignoring(NoSuchElementException.class);
-        highLightElement(driver,element);
+        WebDriverWait wait = new WebDriverWait(driver,12);
         wait.until(ExpectedConditions.visibilityOf(element)).click();
+        highLightElement(driver,element);
         System.out.println(element.toString() + "is clicked sucessfully");
     }
     public static void highLightElement(WebDriver driver , WebElement element){
@@ -48,7 +46,5 @@ public class PageUtils {
 
         }
         js. executeScript("arguments[0]. setAttribute('style', 'border:2px solid red; background:white')", element);
-
-
     }
 }

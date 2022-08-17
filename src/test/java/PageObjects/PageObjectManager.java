@@ -11,4 +11,8 @@ public class PageObjectManager {
         LoginPage loginPage = new LoginPage(driver);
         return loginPage;
     }
+    public HomePage homePage(){
+        HomePage homePage = new HomePage(driver);
+        return homePage;
+    }
 }

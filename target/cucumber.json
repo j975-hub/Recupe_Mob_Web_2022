@@ -3,20 +3,20 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-12T10:22:51.882Z",
-        "line": 4,
-        "name": "Recupe Team Sign in application",
+        "start_timestamp": "2022-08-17T10:31:27.189Z",
+        "line": 5,
+        "name": "Patient details Creation",
         "description": "",
-        "id": "login-on-recupe-team-clinic;recupe-team-sign-in-application",
+        "id": "patient-creation;patient-details-creation",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 25088000000,
+              "duration": 13078000000,
               "status": "passed"
             },
-            "line": 5,
+            "line": 6,
             "name": "User select the User type as \"Admin / PSM\"",
             "match": {
               "arguments": [
@@ -31,24 +31,41 @@
           },
           {
             "result": {
-              "duration": 4835000000,
+              "duration": 3956000000,
               "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "User will give the credential to sign in the application",
             "match": {
               "location": "WebStepDefinitions.TestCase1.user_will_give_the_credential_to_sign_in_the_applicaton()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 26813000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User will Add patient Tab.",
+            "match": {
+              "location": "WebStepDefinitions.TestCase2.user_will_click_on_add_patient_tab()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TC2"
           }
         ]
       }
     ],
-    "name": "Login on Recupe Team Clinic",
-    "description": "  Description: User will login as Admin",
-    "id": "login-on-recupe-team-clinic",
+    "name": "Patient Creation",
+    "description": "  Description: User will create patient profile",
+    "id": "patient-creation",
     "keyword": "Feature",
-    "uri": "file:src/test/java/WebFeatures/TestCase1.feature",
+    "uri": "file:src/test/java/WebFeatures/TestCase2.feature",
     "tags": []
   }
 ]

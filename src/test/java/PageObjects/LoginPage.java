@@ -8,10 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class LoginPage extends PageUtils {
-    WebDriver driver;
     public LoginPage(WebDriver driver){
         super(driver);
-        this.driver = driver;
         PageFactory.initElements(driver,this);
     }
     @FindBy(name = "userType")
