@@ -1,12 +1,16 @@
 package WebUtils;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.support.locators.RelativeLocator;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-import java.util.NoSuchElementException;
+import java.time.Duration;
 
 public class PageUtils {
     WebDriver driver;
@@ -22,7 +26,7 @@ public class PageUtils {
 
     public WebElement waitAndSendkeys(WebElement element, Object value) {
         WebElement find;
-        WebDriverWait wait = new WebDriverWait(driver,10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(12));
         find = wait.until(ExpectedConditions.visibilityOf(element));
 
         highLightElement(driver, element);
@@ -32,7 +36,7 @@ public class PageUtils {
         return find;
     }
     public void waitAndClick(WebElement element){
-        WebDriverWait wait = new WebDriverWait(driver,12);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(12));
         wait.until(ExpectedConditions.visibilityOf(element)).click();
         highLightElement(driver,element);
         System.out.println(element.toString() + "is clicked sucessfully");

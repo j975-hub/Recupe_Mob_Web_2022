@@ -1,20 +1,29 @@
 package WebStepDefinitions;
 
+import WebUtils.AlternateClass;
 import WebUtils.TestContextSetup;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.locators.RelativeLocator;
 
 public class TestCase2 {
     TestContextSetup testContextSetup;
     public TestCase2(TestContextSetup testContextSetup){
         this.testContextSetup = testContextSetup;
     }
-    @And("User will Add patient Tab.")
-    public void user_will_click_on_add_patient_tab() throws InterruptedException {
-        Thread.sleep(12000);
-        testContextSetup.pageObjectManager.homePage().setAllPatientTab();
-        Thread.sleep(12000);
-        testContextSetup.pageObjectManager.homePage().setAddPatientTab();
+
+
+    @Then("User fill Patient Information")
+    public void user_fill_patient_information() throws InterruptedException {
+
+        testContextSetup.pageObjectManager.patientFormPage().setFirstName("Sara");
+        testContextSetup.pageObjectManager.patientFormPage().setLastName("Racher");
+        new AlternateClass(testContextSetup.driver).setDate();
+
+
+
     }
 }

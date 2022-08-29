@@ -11,7 +11,7 @@ public class HomePage extends PageUtils {
         super(driver);
         PageFactory.initElements(driver,this);
     }
-    @FindBy(xpath = "(//a[@class='nav-link text-white p-1'])[2]")
+    @FindBy(xpath = "//li[@class='nav-item border rounded mr-2']/descendant::a[@href='#/patients']")
     private WebElement allPatientTab;
     @FindBy(xpath = "//small[text()='Add Patient']")
     private WebElement addPatientTab;
@@ -20,6 +20,6 @@ public class HomePage extends PageUtils {
         waitAndClick(allPatientTab);
     }
     public void setAddPatientTab(){
-        waitAndClick(addPatientTab);
+       waitAndClick(addPatientTab);
     }
 }
