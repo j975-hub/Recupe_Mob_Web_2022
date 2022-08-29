@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="44.561">
-<testcase classname="Patient Creation" name="Patient details Creation" time="44.103">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="57.56">
+<testcase classname="Patient Creation" name="Patient details Creation" time="56.936">
 <system-out><![CDATA[Given User select the User type as "Admin / PSM"............................passed
 Then User will give the credential to sign in the application...............passed
 And User will Add patient Tab...............................................passed
+And User fill Patient Information...........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

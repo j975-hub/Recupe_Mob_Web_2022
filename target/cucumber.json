@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-17T10:31:27.189Z",
+        "start_timestamp": "2022-08-29T14:52:07.917Z",
         "line": 5,
         "name": "Patient details Creation",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 13078000000,
+              "duration": 17233000000,
               "status": "passed"
             },
             "line": 6,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 3956000000,
+              "duration": 3799000000,
               "status": "passed"
             },
             "line": 7,
@@ -43,13 +43,25 @@
           },
           {
             "result": {
-              "duration": 26813000000,
+              "duration": 32458000000,
               "status": "passed"
             },
             "line": 8,
             "name": "User will Add patient Tab.",
             "match": {
-              "location": "WebStepDefinitions.TestCase2.user_will_click_on_add_patient_tab()"
+              "location": "WebStepDefinitions.TestCase1.user_will_click_on_add_patient_tab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3171000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User fill Patient Information",
+            "match": {
+              "location": "WebStepDefinitions.TestCase2.user_fill_patient_information()"
             },
             "keyword": "And "
           }

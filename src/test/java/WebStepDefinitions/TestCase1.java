@@ -2,6 +2,7 @@ package WebStepDefinitions;
 
 import PageObjects.LoginPage;
 import WebUtils.TestContextSetup;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -38,6 +39,18 @@ public class TestCase1 {
             testContextSetup.pageObjectManager.LoginPage().setSigninButton();
         }catch (Exception e){
             Assert.fail("Fail to sign in the application" + e);
+            e.printStackTrace();
+        }
+    }
+    @And("User will Add patient Tab.")
+    public void user_will_click_on_add_patient_tab() throws InterruptedException {
+        try{
+            Thread.sleep(15000);
+            testContextSetup.pageObjectManager.homePage().setAllPatientTab();
+            Thread.sleep(12000);
+            testContextSetup.pageObjectManager.homePage().setAddPatientTab();
+        }catch (Exception e){
+            Assert.fail("Fail to click the addPatientTab" + e);
             e.printStackTrace();
         }
     }

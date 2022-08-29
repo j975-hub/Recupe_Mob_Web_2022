@@ -15,4 +15,8 @@ public class PageObjectManager {
         HomePage homePage = new HomePage(driver);
         return homePage;
     }
+    public PatientFormPage patientFormPage(){
+        PatientFormPage patientFormPage = new PatientFormPage(driver);
+        return patientFormPage;
+    }
 }
