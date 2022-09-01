@@ -9,6 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.locators.RelativeLocator;
 
+import java.io.IOException;
+
 public class PatientFormPage extends PageUtils {
 WebDriver driver;
     public PatientFormPage(WebDriver driver){
@@ -21,9 +23,9 @@ WebDriver driver;
     private WebElement firstName;
     @FindBy(xpath = "//input[@name='lastName']")
     private WebElement lastName;
-    @FindBy(xpath = "//div[@class='input-group']") //(//div[@class='input-group'])[1]
+    @FindBy(xpath = "//div[@class='input-group']")
     private WebElement date;
-    private By dataBy = By.xpath("//div[@class='input-group']");         //  (//div[@class='input-group']);
+    private By dataBy = By.xpath("//div[@class='input-group']");
     @FindBy(xpath = "//select[@name='gender']")
     private WebElement gender;
     @FindBy(xpath = "//select[@name='preferredLanguage']")
@@ -32,26 +34,67 @@ WebDriver driver;
     private WebElement emailID;
     @FindBy(xpath = "//input[@name='confirmEmailAddress']")
     private WebElement confirmEmailID;
-    @FindBy(xpath = "(//input[@name='password'])[2]")
+    @FindBy(xpath = "//label[text()='Password ']/following-sibling::input[@name='password']")
     private WebElement password;
-    @FindBy(xpath = "(//input[@name='confirmPassword'])[2]")
+    @FindBy(xpath = "//label[text()='Confirm Password ']/following-sibling::input[@name='confirmPassword']")
     private WebElement confirmPassword;
     @FindBy(xpath = "//input[@name='mobilePhone']")
     private WebElement mobileNumber;
-    @FindBy(xpath = "//span[text()='Non-Surgical']")
-    private WebElement typeOfSurgery;
+    @FindBy(xpath = "//label[text()='Type']/following-sibling::ng-select//input[@role='combobox']")
+    private WebElement type;
     @FindBy(xpath = "//select[@name='procedureType']")
     private WebElement procedure;
-    @FindBy(xpath = "//span[text()='Dr. Albert, Jeffrey']")
+    @FindBy(xpath = "//label[text()='Surgeon']/following-sibling::ng-select//input[@role='combobox']")
     private WebElement surgeon;
-    @FindBy(xpath = "//small[text()='Save Patient']")
+    @FindBy(xpath = "//small[text()='Save Patient']/..")
     private WebElement saveButton;
 
-    public void setFirstName(String text){
-        waitAndSendkeys(firstName,text);
-    }
-    public void setLastName(String text){
-        waitAndSendkeys(lastName,text);
-    }
 
+    public void setFirstName(String text) throws IOException {
+        firstName.clear();
+        waitAndSendkeys(firstName,text,"firstName");
+    }
+    public void setLastName(String text) throws IOException {
+       lastName.clear();
+        waitAndSendkeys(lastName,text,"lastName");
+    }
+    public void setGender(String text) throws IOException {
+        selectType(gender,text,"gender");
+    }
+    public void setEmailID(String text) throws IOException {
+        emailID.clear();
+        waitAndSendkeys(emailID,text,"emailID");
+    }
+    public void setConfirmEmailID(String text) throws IOException {
+        confirmEmailID.clear();
+        waitAndSendkeys(confirmEmailID,text,"confirmEmailID");
+    }
+    public void setPassword(String text) throws IOException {
+        password.clear();
+        waitAndSendkeys(password,text,"password");
+    }
+    public void setConfirmPassword(String text) throws IOException {
+        confirmPassword.clear();
+        waitAndSendkeys(confirmPassword,text,"confirmPassword");
+    }
+    public void setMobileNumber(String text) throws IOException {
+        mobileNumber.clear();
+        waitAndSendkeys(mobileNumber,text,"mobileNumber");
+    }
+    public void selectSurgeryType(String s) throws InterruptedException {
+        type.click();
+        WebElement typeOfSurgery= driver.findElement(By.xpath(String.format("//span[text()='%s']",s)));
+        typeOfSurgery.click();
+    }
+    public void selectProcedure(String text) throws IOException {
+        selectType(procedure,text,"procedure");
+    }
+    public void selectSurgeon(String s){
+        surgeon.click();
+        WebElement surgeonName = driver.findElement(By.xpath(String.format("//span[text()='%s']",s)));
+        surgeonName.click();
+    }
+    public void savePatientForm() throws IOException {
+        waitAndClick(saveButton,"saveButton");
+    }
 }

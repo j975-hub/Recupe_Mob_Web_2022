@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-29T14:52:07.917Z",
+        "start_timestamp": "2022-09-01T03:53:19.705Z",
         "line": 5,
         "name": "Patient details Creation",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 17233000000,
+              "duration": 12705000000,
               "status": "passed"
             },
             "line": 6,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 3799000000,
+              "duration": 4100000000,
               "status": "passed"
             },
             "line": 7,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 32458000000,
+              "duration": 31464000000,
               "status": "passed"
             },
             "line": 8,
@@ -55,7 +55,7 @@
           },
           {
             "result": {
-              "duration": 3171000000,
+              "duration": 17045000000,
               "status": "passed"
             },
             "line": 9,
