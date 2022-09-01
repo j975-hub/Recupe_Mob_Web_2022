@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.IOException;
+
 public class LoginPage extends PageUtils {
     public LoginPage(WebDriver driver){
         super(driver);
@@ -21,16 +23,16 @@ public class LoginPage extends PageUtils {
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement signinButton;
 
-    public void setUserType(String text){
-        selectUserType(userType,text);
+    public void setUserType(String text) throws IOException {
+        selectType(userType,text,"userType");
     }
-    public void setUserName(String text){
-       waitAndSendkeys(userName,text);
+    public void setUserName(String text) throws IOException {
+       waitAndSendkeys(userName,text,"userName");
     }
-    public void setPassword(String text){
-        waitAndSendkeys(password,text);
+    public void setPassword(String text) throws IOException {
+        waitAndSendkeys(password,text,"password");
     }
-    public void setSigninButton(){
-        waitAndClick(signinButton);
+    public void setSigninButton() throws IOException {
+        waitAndClick(signinButton,"siginButton");
     }
 }

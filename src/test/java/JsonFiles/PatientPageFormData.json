@@ -1,0 +1,18 @@
+{
+  "FirstName":"Sara",
+  "LastName":"Racher",
+  "Gender":"Female",
+  "Email":"sara@gmail.com",
+  "ConfirmEmail":"sara@gmail.com",
+  "Password":"12345",
+  "ConfirmPassword":"12345",
+  "MobilePhone":"0123456789",
+  "Type":"Non-Surgical",
+  "Procedure":"Ankle Fracture",
+  "Surgeon":"Dr. Albert, Jeffrey",
+
+  "PatientSearch":{
+    "PatientName":"Sara Racher"
+  }
+
+}
