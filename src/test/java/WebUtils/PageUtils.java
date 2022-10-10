@@ -32,6 +32,7 @@ public class PageUtils {
 
         highLightElement(driver, element);
         if (value != null) {
+            element.clear();
             element.sendKeys(value.toString());
         }
         secreenShotOfWebelement(element,fileName);
@@ -58,5 +59,16 @@ public class PageUtils {
     private void secreenShotOfWebelement(WebElement element,String fileName) throws IOException {
         File src = element.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(src,new File(".\\src\\test\\java\\ScreenshotsCollection\\"+fileName+".png"));
+    }
+
+    protected void screenShortOfAllElement(String fileName) throws IOException {
+       File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+       FileUtils.copyFile(src,new File(".\\src\\test\\java\\ScreenshotsCollectionTotalPage\\"+fileName+".jpg"));
+    }
+
+    protected void isElementPresent(WebElement element){
+        System.out.println("isDisplayed : "+element.isDisplayed());
+        System.out.println("isEnabled : "+element.isEnabled());
+        System.out.println("isSelected :"+element.isSelected());
     }
 }

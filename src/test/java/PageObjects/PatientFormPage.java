@@ -48,37 +48,32 @@ WebDriver driver;
     private WebElement surgeon;
     @FindBy(xpath = "//small[text()='Save Patient']/..")
     private WebElement saveButton;
+    @FindBy(xpath = "//label[text()='Recupe Coach']/following-sibling::ng-select")
+    private WebElement recupeCoach;
 
 
     public void setFirstName(String text) throws IOException {
-        firstName.clear();
         waitAndSendkeys(firstName,text,"firstName");
     }
     public void setLastName(String text) throws IOException {
-       lastName.clear();
         waitAndSendkeys(lastName,text,"lastName");
     }
     public void setGender(String text) throws IOException {
         selectType(gender,text,"gender");
     }
     public void setEmailID(String text) throws IOException {
-        emailID.clear();
         waitAndSendkeys(emailID,text,"emailID");
     }
     public void setConfirmEmailID(String text) throws IOException {
-        confirmEmailID.clear();
         waitAndSendkeys(confirmEmailID,text,"confirmEmailID");
     }
     public void setPassword(String text) throws IOException {
-        password.clear();
         waitAndSendkeys(password,text,"password");
     }
     public void setConfirmPassword(String text) throws IOException {
-        confirmPassword.clear();
         waitAndSendkeys(confirmPassword,text,"confirmPassword");
     }
     public void setMobileNumber(String text) throws IOException {
-        mobileNumber.clear();
         waitAndSendkeys(mobileNumber,text,"mobileNumber");
     }
     public void selectSurgeryType(String s) throws InterruptedException {
@@ -96,5 +91,10 @@ WebDriver driver;
     }
     public void savePatientForm() throws IOException {
         waitAndClick(saveButton,"saveButton");
+    }
+    public void selectRecupeCoach(String s){
+       recupeCoach.click();
+       WebElement recupeCoachName = driver.findElement((By.xpath(String.format("//span[text()='%s']",s))));
+       recupeCoachName.click();
     }
 }

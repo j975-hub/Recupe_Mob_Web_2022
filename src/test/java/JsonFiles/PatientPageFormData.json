@@ -8,9 +8,11 @@
   "ConfirmPassword":"12345",
   "MobilePhone":"0123456789",
   "Type":"Non-Surgical",
-  "Procedure":"Ankle Fracture",
+  "procedure":"Ankle Fracture",
   "Surgeon":"Dr. Albert, Jeffrey",
-
+  "Procedure":{
+    "RecupeCoach":"Indra Paez"
+  },
   "PatientSearch":{
     "PatientName":"Sara Racher"
   }
