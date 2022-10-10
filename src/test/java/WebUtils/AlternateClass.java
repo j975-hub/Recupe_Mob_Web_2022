@@ -13,6 +13,6 @@ public class AlternateClass {
     public void setDate() throws InterruptedException {
         WebElement lastName = driver.findElement(By.xpath("//input[@name='lastName']"));
         driver.findElement(RelativeLocator.with(By.tagName("input")).below(lastName)).click();
-        driver.findElement(By.xpath("(//div[@class='btn-light'])[15]")).click();
+        driver.findElement(By.xpath("(//div[@class='btn-light'])[16]")).click();
     }
 }

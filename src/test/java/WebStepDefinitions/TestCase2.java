@@ -32,7 +32,7 @@ public class TestCase2 {
             testContextSetup.pageObjectManager.patientFormPage().setConfirmPassword(testContextSetup.getJsonPath(fileName).get("ConfirmPassword"));
             testContextSetup.pageObjectManager.patientFormPage().setMobileNumber(testContextSetup.getJsonPath(fileName).get("MobilePhone"));
             testContextSetup.pageObjectManager.patientFormPage().selectSurgeryType(testContextSetup.getJsonPath(fileName).get("Type"));
-            testContextSetup.pageObjectManager.patientFormPage().selectProcedure(testContextSetup.getJsonPath(fileName).get("Procedure"));
+            testContextSetup.pageObjectManager.patientFormPage().selectProcedure(testContextSetup.getJsonPath(fileName).get("procedure"));
             testContextSetup.pageObjectManager.patientFormPage().selectSurgeon(testContextSetup.getJsonPath(fileName).get("Surgeon"));
             testContextSetup.pageObjectManager.patientFormPage().savePatientForm();
         } catch (Exception e){
@@ -42,8 +42,34 @@ public class TestCase2 {
     }
     @Then("User validate Patient Information")
     public void user_validate_patient_information() throws InterruptedException, IOException {
-        testContextSetup.pageObjectManager.homePage().setAllPatientTab();
-        Thread.sleep(5000);
-        testContextSetup.pageObjectManager.homePage().searchPatient(testContextSetup.getJsonPath(fileName).get("PatientSearch.PatientName"));
+        try {
+            testContextSetup.pageObjectManager.homePage().setAllPatientTab();
+            Thread.sleep(5000);
+            testContextSetup.pageObjectManager.homePage().searchPatient(testContextSetup.getJsonPath(fileName).get("PatientSearch.PatientName"));
+        }catch (Exception e){
+            Assert.fail("fail to validate the patient Information " +e);
+        }
     }
+    @Then("^User click on Patient bar$")
+    public void user_click_on_patient_bar() throws Throwable {
+        try {
+            testContextSetup.pageObjectManager.allPatientsPage().clickOnPatientBar();
+            Thread.sleep(15000);
+            testContextSetup.pageObjectManager.allPatientsPage().clickOnPatientEditButton();
+        }catch (Exception e){
+            Assert.fail("Fail to click the Patient Bar " +e);
+        }
+    }
+    @And("^User will edit the profile and add Recupe Coach Name$")
+    public void user_will_edit_the_profile_and_add_recupe_coach_name() throws Throwable {
+        try {
+            Thread.sleep(10000);
+            testContextSetup.pageObjectManager.patientFormPage().selectRecupeCoach(testContextSetup.getJsonPath(fileName).get("Procedure.RecupeCoach"));
+            testContextSetup.pageObjectManager.allPatientsPage().updatePatient();
+        }catch (Exception e){
+            Assert.fail("Failed to edit profile of Recupe Coach " +e);
+        }
+
+    }
+
 }

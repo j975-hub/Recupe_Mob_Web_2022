@@ -3,17 +3,17 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-09-01T03:53:19.705Z",
+        "start_timestamp": "2022-09-13T14:03:37.026Z",
         "line": 5,
-        "name": "Patient details Creation",
+        "name": "Patient details Validation",
         "description": "",
-        "id": "patient-creation;patient-details-creation",
+        "id": "patient-validation;patient-details-validation",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 12705000000,
+              "duration": 18985000000,
               "status": "passed"
             },
             "line": 6,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 4100000000,
+              "duration": 4403000000,
               "status": "passed"
             },
             "line": 7,
@@ -43,41 +43,53 @@
           },
           {
             "result": {
-              "duration": 31464000000,
+              "duration": 16866000000,
               "status": "passed"
             },
             "line": 8,
-            "name": "User will Add patient Tab.",
+            "name": "User validate Patient Information",
             "match": {
-              "location": "WebStepDefinitions.TestCase1.user_will_click_on_add_patient_tab()"
+              "location": "WebStepDefinitions.TestCase2.user_validate_patient_information()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 17045000000,
+              "duration": 15463000000,
               "status": "passed"
             },
             "line": 9,
-            "name": "User fill Patient Information",
+            "name": "User click on Patient bar",
             "match": {
-              "location": "WebStepDefinitions.TestCase2.user_fill_patient_information()"
+              "location": "WebStepDefinitions.TestCase2.user_click_on_patient_bar()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11910000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User will edit the profile and add Recupe Coach Name",
+            "match": {
+              "location": "WebStepDefinitions.TestCase2.user_will_edit_the_profile_and_add_recupe_coach_name()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@TC2"
+            "name": "@TC4"
           }
         ]
       }
     ],
-    "name": "Patient Creation",
-    "description": "  Description: User will create patient profile",
-    "id": "patient-creation",
+    "name": "Patient Validation",
+    "description": "  Description: User will validate patient profile",
+    "id": "patient-validation",
     "keyword": "Feature",
-    "uri": "file:src/test/java/WebFeatures/TestCase2.feature",
+    "uri": "file:src/test/java/WebFeatures/TestCase4.feature",
     "tags": []
   }
 ]

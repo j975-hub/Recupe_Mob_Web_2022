@@ -19,4 +19,8 @@ public class PageObjectManager {
         PatientFormPage patientFormPage = new PatientFormPage(driver);
         return patientFormPage;
     }
+    public AllPatientsPage allPatientsPage(){
+        AllPatientsPage allPatientsPage = new AllPatientsPage(driver);
+        return allPatientsPage;
+    }
 }

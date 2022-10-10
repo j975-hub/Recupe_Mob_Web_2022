@@ -27,7 +27,7 @@ public class BaseClass {
         try {
             log = LogManager.getLogger(BaseClass.class.getName());
             prop = new Properties();
-            fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\Configuration\\config.properties");
+            fis = new FileInputStream(".\\src\\test\\resources\\Configuration\\config.properties");
             Assert.assertNotNull(fis, "config.properties file not loaded");
             prop.load(fis);
         } catch (FileNotFoundException e) {

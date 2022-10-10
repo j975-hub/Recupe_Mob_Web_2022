@@ -28,5 +28,6 @@ public class HomePage extends PageUtils {
     }
     public void searchPatient(String text) throws IOException {
         waitAndSendkeys(patientSearchBox,text,"patientSearchBox");
+        screenShortOfAllElement("searchPatient");
     }
 }

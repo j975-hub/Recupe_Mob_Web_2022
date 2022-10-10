@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         glue = "WebStepDefinitions",
         monochrome = true,
         dryRun = false,
-        tags = "@TC2",
+        tags = "@TC4",
         plugin = {"pretty","html:target/cucumber.html", "json:target/cucumber.json" , "junit:target/cucumber.xml",
                   "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                   "rerun:target/fail_scenarios.txt"}
